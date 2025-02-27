@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Open the file for writing (create if it doesn't exist, truncate if it does)
-    int fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    // Open the file for writing (create if it doesn't exist)
+    int fd = open(argv[2], O_WRONLY | O_CREAT, 0644);
     if (fd < 0) 
     {
         perror("open failed");
